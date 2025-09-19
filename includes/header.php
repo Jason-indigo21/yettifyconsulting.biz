@@ -46,7 +46,7 @@
 </head>
 
 <body>
-
+<?php include('./includes/content.php');?>
 <!--== Start Header Area Wrapper ==-->
 <header class="header-area">
     <div class="container">
@@ -54,99 +54,27 @@
             <div class="col-5 col-lg-2">
                 <!-- Start Logo Area -->
                 <div class="logo-area">
-                    <a href="index.html"><img src="assets/img/logo.png" alt="Businex-Logo"></a>
+                    <a href="index.html"><img src="assets/images/logo-png.png" alt="Businex-Logo" ></a>
                 </div>
                 <!-- End Logo Area -->
             </div>
 
-            <div class="col-lg-7 d-none d-lg-block">
+            <div class="col-lg-12 d-none d-lg-block">
                 <!-- Start Navigation Area -->
                 <div class="navigation-area">
                     <ul class="main-menu nav">
-                        <li class="has-submenu"><a href="index.html">Home</a>
-                            <ul class="submenu-nav">
-                                <li><a href="index.html">Home 01</a></li>
-                                <li><a href="index-2.html">Home 02</a></li>
-                                <li><a href="index-3.html">Home 03</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu"><a href="service.html">Pages</a>
-                            <ul class="submenu-nav submenu-nav-mega">
-                                <li class="mega-menu-item"><a href="#">Page Sample 01</a>
-                                    <ul>
-                                        <li><a href="index.html">Home 01</a></li>
-                                        <li><a href="index-2.html">Home 02</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="faq.html">F.A.Q</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="mega-menu-item"><a href="#">Page Sample 02</a>
-                                    <ul>
-                                        <li><a href="service.html">Service</a></li>
-                                        <li><a href="service-details.html">Service Details</a></li>
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="team-details.html">Team Details</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="mega-menu-item"><a href="#">Page Sample 03</a>
-                                    <ul>
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                        <li><a href="blog.html">Blog Right Sidebar</a></li>
-                                        <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="mega-menu-item"><a href="#">Page Sample 04</a>
-                                    <ul>
-                                        <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                        <li><a href="blog-details-with-sidebar.html">Blog Details With Sidebar</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu"><a href="service.html">Service</a>
-                            <ul class="submenu-nav">
-                                <li><a href="service.html">Service</a></li>
-                                <li><a href="service-details.html">Service Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu"><a href="team.html">Team</a>
-                            <ul class="submenu-nav">
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="team-details.html">Team Details</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-submenu"><a href="blog.html">Blog</a>
-                            <ul class="submenu-nav">
-                                <li><a href="blog-grid.html">Blog Grid</a></li>
-                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                <li><a href="blog.html">Blog Right Sidebar</a></li>
-                                <li><a href="blog-list-left-sidebar.html">Blog List Left Sidebar</a></li>
-                                <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                                <li><a href="blog-details-with-sidebar.html">Blog Details With Sidebar</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <?php foreach ($navs as $nav):    ?>
+                            <?php if(in_array($nav['link'], ['cookies-policy','privacy-policy'])) continue;?>
+                              <li class="has-submenu"><a href="./?page=<?= $nav['link'] ?>"><?= $nav['title'] ?></a>                         
+                        </li>                        
+                        
+                        <?php endforeach; ?>
+                      
                     </ul>
                 </div>
                 <!-- End Navigation Area -->
             </div>
 
-            <div class="col-7 col-lg-3">
-                <!-- Start Header Action Area -->
-                <div class="header-action text-end">
-                    <a href="tel:00199823568658" class="tel-no">+998 23568 658</a>
-                    <button class="btn-cog"><i class="fa fa-cog"></i></button>
-                    <button class="btn-menu d-lg-none"><i class="fa fa-bars"></i></button>
-                </div>
-                <!-- End Header Action Area -->
-            </div>
         </div>
     </div>
 </header>

@@ -1,8 +1,8 @@
 <?php
 switch ($_REQUEST['page']) {
 
-	case 'about-us':
-		include('views/about-us.php');
+	case 'corporate-profile':
+		include('views/corporate-profile.php');
 		break;
 	case 'faqs':
 		include('views/faqs.php');
@@ -10,10 +10,13 @@ switch ($_REQUEST['page']) {
 	case 'industries':
 		include('views/industries.php');
 		break;
-	case 'services':
-		include('views/services.php');
+	case 'specialty-areas':
+		include('views/specialty-areas.php');
 		break;
-	case 'contact-us':
+	case 'key-technologies':
+		include('views/key-technologies.php');
+		break;
+	case 'lets-talk':
 		include('views/contact-us.php');
 		break;
 	case 'privacy-policy':
@@ -26,4 +29,3 @@ switch ($_REQUEST['page']) {
 		include('views/home.php');
 		break;
 }
-?>
