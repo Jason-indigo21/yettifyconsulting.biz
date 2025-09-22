@@ -74,7 +74,7 @@
                                     Jakarta Selatan, Indonesia</p>
                                     <br>
                                     <p><strong>Email:</strong>
-                                    <a href="mailto:itservices@yettifyconsulting.biz">itservices@yettifyconsulting.biz</a></p>
+                                    <a class="text-white" href="mailto:itservices@yettifyconsulting.biz">itservices@yettifyconsulting.biz</a></p>
                                     <br>
                                     <p><strong>Phone:</strong>
                                     (+62) 2150334985</p>
