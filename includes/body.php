@@ -20,7 +20,7 @@ switch ($_REQUEST['page']) {
 		include('views/market-experience.php');
 		break;
 	case 'lets-talk':
-		include('views/contact-us.php');
+		include('views/lets-talk.php');
 		break;
 	case 'privacy-policy':
 		include('views/privacy-policy.php');
