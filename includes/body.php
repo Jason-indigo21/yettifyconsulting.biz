@@ -13,11 +13,11 @@ switch ($_REQUEST['page']) {
 	case 'specialty-areas':
 		include('views/specialty-areas.php');
 		break;
-	case 'key-technologies':
-		include('views/key-technologies.php');
-		break;
 	case 'market-experience':
 		include('views/market-experience.php');
+		break;
+	case 'key-technologies':
+		include('views/key-technologies.php');
 		break;
 	case 'lets-talk':
 		include('views/lets-talk.php');

@@ -1,66 +1,48 @@
 <!--== Start Footer Area Wrapper ==-->
 <footer class="footer-area sp-y">
-    <div class="footer-top-wrap">
-        <div class="container">
-            <div class="footer-top-content">
-                <div class="row align-items-center">
-                    <div class="col-md-8 col-lg-6">
-                        <h2>Get Started Today</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets to grow up their
-                            Business sharply and smoothly.</p>
-                    </div>
-                    <div class="col-md-4 col-lg-6 text-md-end mt-sm-25">
-                        <a href="contact.html" class="btn-outline">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="footer-widget-area sm-top-wt">
         <div class="container">
             <div class="row mtn-40">
                 <div class="col-lg-4 order-4 order-lg-0">
                     <div class="widget-item">
-                        <div class="about-widget">
-                            <a href="index.html"><img src="assets/img/logo-dark.png" alt="Logo"></a>
-                            <p>During the summer my wife and I got to go on an amazing road trip in Vancouver.</p>
+                        <div class="about-widget px-5" style="text-align:justify;">
+                            <a href="index.html"><img src="assets/images/logo-png.png" class="w-100`" alt="Logo"></a>
+                            <p>We are a consulting firm that transforms business challenges into opportunities for sustainable growth and success. </p>
 
                             <div class="copyright-txt">
                                 <p>&copy;
                                     <script>
                                         document.write(new Date().getFullYear())
                                     </script>
-                                    Businex Ltd. All Rights Reserved.
+                                    Yettify Consulting Group
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-lg-2 ms-auto">
+                <div class="col-md-3 col-lg-2 ms-auto">
                     <div class="widget-item">
                         <h4 class="widget-title">Information</h4>
                         <div class="widget-body">
                             <ul class="widget-list">
-                                <li><a href="#">Our company</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Our services</a></li>
-                                <li><a href="#">Careers</a></li>
+                                <?php foreach ($navs as $nav): ?>
+                                    <li><a href="./?page=<?= $nav['link'] ?>"><?= $nav['title'] ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4 col-lg-2 ms-auto">
+                <div class="col-md-5 col-lg-2 ms-auto" style="padding:0px;">
                     <div class="widget-item">
-                        <h4 class="widget-title">Quick Links</h4>
+                        <h4 class="widget-title">Services</h4>
                         <div class="widget-body">
                             <ul class="widget-list">
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Dribbble</a></li>
-                                <li><a href="#">Instagram</a></li>
+                                <?php foreach ($services as $service): ?>
+                                    <li><a href="./?page=specialty-areas&service=<?= $service['link'] ?>"><?= $service['title'] ?></a></li>
+                                <?php endforeach; ?>
                             </ul>
                         </div>
                     </div>
@@ -68,13 +50,21 @@
 
                 <div class="col-md-4 col-lg-3">
                     <div class="widget-item">
-                        <h4 class="widget-title">Contact</h4>
-                        <div class="widget-body">
-                            <address>
-                                2005 Stokes Isle Apartment. 896, Washington 10010, USA <br>
-                                https://example.com <br>
-                                (+68) 120034509
-                            </address>
+                        <h4 class="widget-title footer">Contact</h4>
+                        <div class="widget-body container">
+                            <div class="row d-flex justify-content-start">
+                                <div class="col-2"> <i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                <div class="col-10 footer-contact-text">
+                                    AXA Tower 36 floor, Unit 5-6 Kuningan City Jl. Pr
+                                    Jakarta Selatan, Indonesia
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-start">
+                                <div class="col-2"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
+                                <div class="col-10 footer-contact-text">
+                                     <a href="mailto:itservices@yettifyconsulting.biz">itservices@yettifyconsulting.biz</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -168,6 +158,38 @@
 <!-- End Off Canvas Menu Wrapper -->
 
 
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-bottom-center modal-xl">
+        <div class="modal-content ">
+            <div class="background-modal"></div>
+            <div class="modal-body td-flex flex-column align-items-center">
+                <div class="modal-body-content ">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-inline-block ">
+                                <img src="./assets/images/cookies.png" class="w-100 d-flex flex-column align-items-center mx-auto" alt="">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="sec-title__title mb-3" id="exampleModalLabel">
+                                Cookie Policy
+                            </h2>
+                            <p class="text-justify mb-4">
+                               Hello! We want to improve your experience. We use cookies to ensure everything works smoothly and to provide you with content that interests you. You can choose how we use them or accept them all for maximum enjoyment.
+                            </p>
+                            <p>Please see our <a href="./?page=cookie-policy">Cookie Policy</a> for more details.</p>
+                            <div class="d-flex flex-row align-items-center justify-content-end gap-2 mt-5 w-100">
+                                <button type="button" class="btn-outline-service" style="height: 65px !important;" id="clickModal" data-bs-dismiss="modal">
+                                    Accept
+                                </button>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--=======================Javascript============================-->
 <script src="assets/js/modernizr-3.6.0.min.js"></script>
 <script src="assets/js/jquery.min.js"></script>
@@ -207,3 +229,75 @@
 </body>
 
 </html>
+
+
+<script>
+    $(document).ready(function() {
+        // $('#exampleModal1').modal('show');
+        let cookies = localStorage.getItem('cookies');
+
+        if (localStorage.getItem('cookies') == '0' || localStorage.getItem('cookies')) {
+            // localStorage.setItem('cookies', false);
+        } else {
+            $('#exampleModal1').modal('show');
+            localStorage.setItem('cookies', '0');
+        }
+    });
+
+    $(document).ready(function() {
+        generate();
+    })
+
+    let captcha;
+
+    function generate() {
+
+        // Clear old input
+        document.getElementById("submit").value = "";
+
+        // Access the element to store
+        // the generated captcha
+        // captcha = document.getElementById("captcha");
+        captchaInput = document.getElementById("captchandler");
+        let uniquechar = "";
+
+        const randomchar =
+            "ABCDEFGHiJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz123456789";
+
+        // Generate captcha for length of
+        // 5 with random character
+        for (let i = 1; i < 7; i++) {
+            uniquechar += randomchar.charAt(
+                Math.random() * randomchar.length)
+        }
+        console.log(uniquechar)
+        // Store generated input
+        // captcha.innerHTML = uniquechar;
+        captchaInput.value = uniquechar;
+
+    }
+
+    function printmsg() {
+        let msgOpening = "";
+        let msgAgent = "";
+        const usr_input = document
+            .getElementById("submit").value;
+
+        // Check whether the input is equal
+        // to generated captcha or not
+        if (usr_input == captchaInput.value) {
+            let s = document.getElementById("key").innerHTML = '<p style="color: #1e3811; font-size: 16px;padding: 1px 10px;background: #fff;width: fit-content; border-radius: 5px;"><i class="fa fa-check"></i> Matched</p>';
+
+
+            $('.submit-button').prop('disabled', false);
+            document.getElementById("captcha_mail").value = captchaInput.value;
+            document.getElementById("btnCheck").disabled = true;
+            generate();
+        } else {
+            let s = document.getElementById("key")
+                .innerHTML = '<p style="color: red; font-size: 16px;padding: 1px 10px;background: #fff;width: fit-content; border-radius: 5px;"><i class="fa fa-exclamation-triangle"></i> INCORRECT CAPTCHA</p>';
+
+            generate();
+        }
+    }
+</script>
