@@ -16,6 +16,9 @@ switch ($_REQUEST['page']) {
 	case 'key-technologies':
 		include('views/key-technologies.php');
 		break;
+	case 'market-experience':
+		include('views/market-experience.php');
+		break;
 	case 'lets-talk':
 		include('views/contact-us.php');
 		break;
